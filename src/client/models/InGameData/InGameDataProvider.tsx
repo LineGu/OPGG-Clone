@@ -125,7 +125,7 @@ function InGameDataProvider({ children, initData }: InGameDataProps) {
           (acc.perChamp[champName].win * 100) /
           (acc.perChamp[champName].win + acc.perChamp[champName].loss);
 
-        acc.perChamp[champName].kda += parseInt(gameData.gameData.stats.general.kdaString);
+        acc.perChamp[champName].kda += parseFloat(gameData.gameData.stats.general.kdaString);
         return acc;
       },
       { win: 0, loss: 0, rate: 0, kill: 0, death: 0, assist: 0, kda: 0, perChamp: {}, perLine: {} }
