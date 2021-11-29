@@ -73,6 +73,7 @@ const RecentGameInfoWrapper = styled.div`
   .empty-champ {
     display: flex;
     align-items: center;
+    padding-bottom: 12px;
 
     span {
       margin-left: 8px;
