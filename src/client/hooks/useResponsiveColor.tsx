@@ -19,7 +19,7 @@ function useResponsiveColor(rule: RuleType, target: number) {
       }
     });
     elRef.current.style.color = color;
-  }, [elRef.current]);
+  }, [elRef.current, target]);
 
   return { targetEl: elRef };
 }
