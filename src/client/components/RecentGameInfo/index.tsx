@@ -69,6 +69,18 @@ const RecentGameInfoWrapper = styled.div`
     height: 100%;
     padding: 16px;
   }
+
+  .empty-champ {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 8px;
+      font-family: NanumBarunGothicOTF;
+      font-size: 11px;
+      color: #999;
+    }
+  }
 `;
 
 const getThreeTopChamp = (perChamp: IRecentGameDataPerChamp[]) => {
@@ -128,6 +140,19 @@ function RecentGameInfo({ recentGamesData }: IRecentGameInfoProps) {
         {topThreeChamps.map((champData) => {
           return <RecentChampWinRate champData={champData} key={champData.name + champData.rate} />;
         })}
+        {topThreeChamps.length < 3
+          ? new Array(3 - topThreeChamps.length).fill(0).map(() => (
+              <div className="empty-champ">
+                <ImageIcon
+                  src="https://i.ibb.co/1LGJVD6/empty-Champ.png"
+                  size={34}
+                  alt="빈 챔피언"
+                  shape="rect"
+                />
+                <span>챔피언 정보가 없습니다.</span>
+              </div>
+            ))
+          : null}
       </div>
     </RecentGameInfoWrapper>
   );
