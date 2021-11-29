@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "@types": ["src/types/index.ts"],
+      "@components/*": ["src/client/components/*"],
+      "@constants/*": ["src/client/constants/*"],
+      "@hooks/*": ["src/client/hooks/*"],
+      "@api/*": ["src/common/api/*"],
+      "@models/*": ["src/client/models/*"],
+      "@layouts/*": ["src/client/layouts/*"],
+      "@utils/*": ["src/common/utils/*"],
+      "@containers/*": ["src/client/containers/*"],
+      "@page/*": ["src/client/page/*"]
+    },
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    ".git",
+    ".app-cache",
+    ".npm",
+    ".npm-tmp",
+    "dist",
+    "dist*",
+    "node_modules",
+    "subfolder/dist",
+    "subfolder/node_modules",
+    "**/dist/*",
+    "**/node_modules/*",
+    "src/server/*"
+  ]
+}

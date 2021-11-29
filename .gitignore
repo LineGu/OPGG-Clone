@@ -1,0 +1,13 @@
+# Modules
+node_modules/
+package-lock.json
+
+.DS_Store
+/.DS_Store
+
+# build
+dist/
+
+# VScode local history
+.history/
+.github/
